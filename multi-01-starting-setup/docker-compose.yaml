@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  mongodb:
+  backend:
+  frontend:
+    image: mongo
+    volumes:
+      - data:/data/db
+    env_file:
+      - ./env/mongo.env
