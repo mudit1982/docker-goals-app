@@ -3,7 +3,7 @@ services:
   mongodb:
     image: mongo
     volumes:
-      - data:/data/db
+      - newdata:/data/db
     env_file:
       - ./env/mongo.env
   backend:
@@ -29,5 +29,5 @@ services:
     depends_on:
       - backend
 volumes:
-  data:
+  newdata:
   logs:
